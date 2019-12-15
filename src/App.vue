@@ -1,12 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <nav-header></nav-header>
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import navHeaderVue from './components/navHeader.vue';
+export default {
+  components: {
+    'nav-header': navHeaderVue
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -18,7 +28,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding-bottom: 30px;
 
   a {
     font-weight: bold;
